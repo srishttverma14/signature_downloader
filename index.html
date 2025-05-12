@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Downloader</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">  
+</head>
+<body>
+    <h1 class="title">SIGNATURE DOWNLOADER</h1>
+    <div class="main">
+        <div class="top">
+            <div class="block">
+                <p>Text Color Picker</p>
+                <input class="form-control" type="color" id="colorPicker"/>
+            </div>
+            <div class="block">
+                <p>Background</p>
+                <input class="form-control" type="color" id="canvasColor"/>
+            </div>
+            <div class="block">
+                <p>Font Size</p>
+                <select id="fontPicker">
+                    <option value="3">3px</option>
+                    <option value="5">5px</option>
+                    <option value="7">7px</option>
+                    <option value="8">8px</option>
+                    <option value="10">10px</option>
+                    <option value="12">12px</option>
+                </select>
+            </div>
+        </div>
+        <canvas class="canvas" id="myCanvas" width="800px" height="500px"></canvas>
+        <div class="bottom">
+            <button type="button" class="btn btn-danger" id="clearButton">Clear</button>
+            <button type="button" class="btn btn-success" id="saveButton">Save & Download</button>
+            <button type="button" class="btn btn-warning" id="retrieveButton">Last Saved Signature</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+:root{
+  --device-width: 100vw;
+}
+
+.title{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(78, 20, 133);
+  font-weight: bold;
+}
+
+.main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 40px;
+}
+
+.canvas{
+  border: 4px solid black;
+  border-radius: 5px;
+}
+
+.top,.bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.block, input, select, button{
+  width: 80%;
+}
+
+.top>.block{
+  margin: 10px;
+}
+
+.bottom>button{
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.block>p{
+  margin: 10px;
+  width: 50%;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+input{
+  font-size: 20px;
+}
+
+@media screen and (max-width:805px){
+  .canvas{
+    width: 700px;
+  }
+  .top,.bottom{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .block, input, select, button{
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width:480px){
+  .title{
+    margin-top: 60px;
+  }
+  .main{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+  }
+  .top,.bottom{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .block, input, select, button{
+    width: 80%;
+  }
+  .block>p{
+    font-size: 18px;
+  }
+  .bottom>button{
+    font-size: 18px;
+  }
+  .canvas{
+    width: var(--device-width);
+    height: 500px;
+    margin: 20px auto;
+  }
+}
